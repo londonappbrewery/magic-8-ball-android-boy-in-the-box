@@ -64,8 +64,8 @@
             <ImageView
                 android:id="@+id/answergiver"
                 android:layout_centerHorizontal="true"
-                android:layout_width="@dimen/_250sdp"
-                android:layout_height="@dimen/_250sdp"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
                 app:srcCompat="@drawable/ball3" />
         </RelativeLayout>
 
@@ -81,6 +81,19 @@
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="If you're too lazy to shake press here" />
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>

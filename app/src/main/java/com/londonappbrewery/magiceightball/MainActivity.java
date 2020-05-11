@@ -6,6 +6,8 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         final ImageView answergiver=findViewById(R.id.answergiver);
         final TextView sarcasm=findViewById(R.id.oneliner);
+        final Button button=findViewById(R.id.button);
+
+
         final String[] oneliner = {"A conscience is what hurts when all your other parts feel so good.",
                 "I’d kill for a Nobel Peace Prize.",
                 "Just because I don’t care doesn’t mean I don’t understand.Oops",
@@ -84,6 +89,19 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("Shake","Shake");
 
+                Random randomnumberGenerator = new Random();
+                int randnum= randomnumberGenerator.nextInt(5);
+                answergiver.setImageResource(diceArray[randnum]);
+
+                int onecount=randomnumberGenerator.nextInt(oneliner.length);
+                sarcasm.setText(oneliner[onecount]);
+
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Random randomnumberGenerator = new Random();
                 int randnum= randomnumberGenerator.nextInt(5);
                 answergiver.setImageResource(diceArray[randnum]);
